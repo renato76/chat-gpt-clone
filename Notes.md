@@ -48,7 +48,7 @@ So, this is perfect example for implementing this in the layout at root level. I
 
 You no longer need to import next/head. Simply add a head.tsx in the app directory and you can then add metatdata object there which contains info such as title and description.
 
-Then asdd your actual Title in te return jsx of the component.
+Then add your title tag in the return jsx of the component.
 
 Here is a screen shot from this project showing the new folder structure and the head component.
 
