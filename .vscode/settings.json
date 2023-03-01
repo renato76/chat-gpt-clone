@@ -3,9 +3,9 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "editor.quickSuggestions": { "strings": true },
   "workbench.colorCustomizations": {
-    "statusBar.background": "#9a03ff",
-    "titleBar.activeBackground": "#9a03ff",
-    "titleBar.inactiveBackground": "#9a03ff",
+    "statusBar.background": "#11A37F",
+    "titleBar.activeBackground": "#11A37F",
+    "titleBar.inactiveBackground": "#11A37F",
     "statusBar.foreground": "#000",
     "titleBar.inactiveForeground": "#000",
     "titleBar.activeForeground": "#000"

@@ -1,8 +1,10 @@
 **Next JS 13 notes**
 
+**Step 1**
+
 Go to next.config.js
 
-in module.exports add:
+in next.config.js add:
 
 ```
 module.exports = {
@@ -12,32 +14,28 @@ module.exports = {
     },
 }
 ```
-yarn dev
 
-You should now see the Next JS Homepage on localhost.
+</br>
 
-Add an app directory (folder) in root.
+**Step 2 - Create A Root Layout**
 
-Then in the app folder, add a page.tsx
+Then, create an app directory at the root of the project.
 
-This is the equivalent of "pages/index.tsx" in Version 12.
+The app directory must include a root layout.
 
-You can now delete the old index.tsx.
+Therefore, in the app directory, add a layout.tsx file. 
 
-In the page.tsx, you can now have your main homepage, similar to what would have been in pages/index.tsx.
+The root layout must define htmL and body tags since Next Js does not automatically create them.
 
-When you now do yarn dev, next will create a head.tsx and layout.tsx at the new app folder level.
+You can copy the contents from _document.tsx and in _app.tsx into root layout.tsx, including global styles.
 
-So, in the new head.tsx you can add your meta stuff, title etc.
-
-Then in layout.tsx, paste in the import for tailwind located in _app.tsx, looks like this:
+So, in layout.tsx, paste in the import for tailwind located in _app.tsx, looks like this:
 
 ```
 import "@/styles/globals.css"
 ```
-You should be able to delete "_app.tsx" file now.
 
-In Layout.tsx, you could also have any styles or additionaly functionality which you want to wrap the app in. 
+In Layout.tsx, you could also have any additional functionality which you want to wrap the app in. 
 
 For example, I wanted to use Next Auth for Authenticating users, using Google and GitHub. 
 
@@ -46,4 +44,24 @@ So, this is perfect example for implementing this in the layout at root level. I
 ![](https://i.imgur.com/P0Azho6.png)
 
 
+**Step 3 - Migrating hext/head**
 
+You no longer need to import next/head. Simply add a head.tsx in the app directory and you can then add metatdata object there which contains info such as title and description.
+
+Then asdd your actual Title in te return jsx of the component.
+
+Here is a screen shot from this project showing the new folder structure and the head component.
+
+![](https://i.imgur.com/jNkQSD7.png)
+
+**Step 3 - Migrating Pages**
+
+Pages in the app directory are Server Components by default.
+
+In the app directory, add a page.tsx
+
+This is the equivalent of "pages/index.tsx" in Version 12.
+
+You can now delete the old index.tsx.
+
+In the page.tsx, you can now have your main homepage, similar to what would have been in pages/index.tsx.
