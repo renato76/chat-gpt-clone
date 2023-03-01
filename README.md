@@ -2,22 +2,35 @@
 
 ## **Overview** ☀️
 
-In this project, I am working with Next.js 13 to build a mini version of ChatGPT Messenger, so I am learning how to use the new folder structure, which gives us server rendered components by default in the new app folder.
+In this project, I am working with Next.js 13 to build a mini version of ChatGPT Messenger, so I am learning how to use the new Next.js folder structure, which gives us server rendered components by default in the new app folder.
 
-I am looking to deploy this on Vercel once it's ready :)
+So far, I have created the homepage layout and the social login using Google.
 
-So far, I have created the homepage layout and the social login using Google
+Next up, I am working on the Sidebar functionality.
+
+## **Tect Stack** 🚀
+
+- React
+- Next JS
+- TypeScript
+- Tailwind
+- OpenAI GPT3 API
+- Google Firebase
+- Next Auth
+- Tailwind CSS
+
+</br>
 
 ## **Screenshots** ⭐️
+
+</br>
 
 **Sign In:**
 
 <img src="./styles/images/signin.png" width="1200">
-<pre>
-</pre>
+
+</br>
 
 **Homepage:**
 
 <img src="./styles/images/homepage.png" width="1200">
-<pre>
-</pre>
