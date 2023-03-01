@@ -1,5 +1,14 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.quickSuggestions": { "strings": true }
+  "editor.quickSuggestions": { "strings": true },
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#9a03ff",
+    "titleBar.activeBackground": "#9a03ff",
+    "titleBar.inactiveBackground": "#9a03ff",
+    "statusBar.foreground": "#000",
+    "titleBar.inactiveForeground": "#000",
+    "titleBar.activeForeground": "#000"
+  },
+  "window.title": "ChatGPT Clone"
 }

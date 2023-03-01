@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import {BoltIcon, ExclamationTriangleIcon, SunIcon} from "@heroicons/react/24/outline"
+import {BoltIcon, ExclamationTriangleIcon, SunIcon} from '@heroicons/react/24/outline'
 
 const HomePage: NextPage = () => {
   return (
