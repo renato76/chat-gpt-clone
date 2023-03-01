@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth'
 import '../styles/globals.css'
 import { authOptions } from '../pages/api/auth/[...nextauth]'
 import Login from '../components/Login'
+import Head from './head'
 
 export const metadata = {
   title: 'Next.js',
@@ -19,7 +20,7 @@ export default async function RootLayout({
 
   return (
     <html>
-      {/* <head /> */}
+      <Head />
       <body>
         <SessionProvider session={session}>
         {!session ? (
