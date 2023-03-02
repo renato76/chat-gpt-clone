@@ -6,16 +6,16 @@ In this project, I am working with Next.js 13 to build a mini version of ChatGPT
 
 So far, I have created the homepage layout and the social login using Google.
 
-Next up, I am working on the Sidebar functionality.
+Next up, I will be working on the Sidebar functionality, including realtime chat.
 
 ## **Tect Stack** 🚀
 
 - React
-- Next JS
+- Next.js 13
 - TypeScript
-- Tailwind
 - OpenAI GPT3 API
-- Google Firebase
+- Firebase
+- Cloud Firestore | NoSQL Cloud Database
 - Next Auth
 - Tailwind CSS
 
