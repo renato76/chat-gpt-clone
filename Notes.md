@@ -65,3 +65,14 @@ This is the equivalent of "pages/index.tsx" in Version 12.
 You can now delete the old index.tsx.
 
 In the page.tsx, you can now have your main homepage, similar to what would have been in pages/index.tsx.
+
+**Step 3 - Add a Firebase Web App**
+
+The next step is to add a Web App to the Firebase project.
+So, to do this, in your Firebase project, hit the cog near "Project Overview", and choose Project Settings.
+
+Then at the bottom, there is a section called "Your Apps", click "Add App" and select "Web app" as the type.
+This should open up an SDK setup and configuration with some instructionsto install firebase and create a firebase.ts file, and add the suggested code.
+
+
+
