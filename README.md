@@ -8,7 +8,7 @@ So far, I have created the homepage layout and the social login using Google.
 
 Next up, I will be working on the Sidebar functionality, including realtime chat.
 
-## **Tect Stack** 🚀
+## **Tech Stack** 🚀
 
 - React
 - Next.js 13

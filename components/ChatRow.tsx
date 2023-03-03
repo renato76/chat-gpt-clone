@@ -1,11 +1,11 @@
-import { ChatBubbleLeftIcon, TrashIcon } from "@heroicons/react/24/outline"
-import { collection, deleteDoc, doc, orderBy, query } from "firebase/firestore"
-import Link from "next/link"
-import { usePathname, useRouter } from "next/navigation"
-import { useEffect, useState } from "react"
-import { db } from "../firebase"
-import { useCollection } from "react-firebase-hooks/firestore"
-import { useSession } from "next-auth/react"
+import { ChatBubbleLeftIcon, TrashIcon } from '@heroicons/react/24/outline'
+import { collection, deleteDoc, doc, orderBy, query } from 'firebase/firestore'
+import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { db } from '../firebase'
+import { useCollection } from 'react-firebase-hooks/firestore'
+import { useSession } from 'next-auth/react'
 
 type Props = {
   id: string
@@ -30,16 +30,16 @@ function ChatRow({ id }: Props) {
 
   const removeChat = async () => {
     await deleteDoc(doc(db, "users", session?.user?.email!, "chats", id))
-    router.push("/")
+    router.push('/')
   }
 
   return (
     <Link
       href={`/chat/${id}`}
-      className={`chatRow justify-center ${active && "bg-gray-700/50"}`}
+      className={`chatRow justify-center my-2 ${active && "bg-gray-700/50"}`}
     >
       <ChatBubbleLeftIcon className="h-5 w-5" />
-      <p className="hidden md:inline-flex flex-1 truncate">
+      <p className="md:inline-flex flex-1 truncate">
         {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
       </p>
       <TrashIcon

@@ -17,19 +17,14 @@ function SideBar() {
     )
   )
 
-  console.log('chats', chats)
-
   return (
-    <div className="p-2 flex flex-col h-screen">
+    <div className="pb-12 px-6 md:p-2 flex flex-col h-screen">
       <div className="flex-1">
         <div>
-          {/* New Chat */}
           <NewChat />
           <div>
             {/* Model Selection */}
           </div>
-
-          {/* Map through the chat rows */}
           {chats?.docs.map(chat => (
             <ChatRow key={chat.id} id={chat.id} />
           ))}

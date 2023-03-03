@@ -4,6 +4,7 @@ import { getServerSession } from 'next-auth'
 import '../styles/globals.css'
 import { authOptions } from '../pages/api/auth/[...nextauth]'
 import Login from '../components/Login'
+import ClientProvider from '../components/ClientProvider'
 
 export default async function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const session = await getServerSession(authOptions)
+
   
   return (
     <html>
@@ -23,9 +25,10 @@ export default async function RootLayout({
             <div className="bg-[#202123] max-w-sm h-screen overflow-y-auto 
             md:min-w-[20rem]"
             >
-            <SideBar />
+            <div className="hidden md:block"><SideBar /></div>
             </div>
             {/* ClientProvider - Notification */}
+            <ClientProvider />
             <div className="bg-[#343541] flex-1">{children}</div>
           </div>
         )}
