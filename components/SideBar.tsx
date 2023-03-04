@@ -2,7 +2,7 @@
 
 import { collection, orderBy, query } from 'firebase/firestore'
 import { useSession, signOut } from 'next-auth/react'
-import {useCollection} from 'react-firebase-hooks/firestore'
+import { useCollection } from 'react-firebase-hooks/firestore'
 import { db } from '../firebase'
 import NewChat from './NewChat'
 import ChatRow from './ChatRow'
@@ -32,7 +32,7 @@ function SideBar() {
       </div>
       {session && (
         <img 
-         onClick={() => signOut()}
+          onClick={() => signOut()}
           src={session.user?.image!} 
           alt="profile pic" 
           className="h-12 w-12 rounded-full mx-auto mb-2 hover:opacity-50 cursor-pointer" 

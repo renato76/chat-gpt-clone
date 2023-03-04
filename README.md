@@ -34,3 +34,9 @@ Next up, I will be working on the Sidebar functionality, including realtime chat
 **Homepage:**
 
 <img src="./styles/images/homepage.png" width="1200">
+
+</br>
+
+**ChatGPT:**
+
+<img src="./styles/images/chatgpt.png" width="1200">
