@@ -22,21 +22,24 @@ function SideBar() {
       <div className="flex-1">
         <div>
           <NewChat />
-          <div>
-            {/* Model Selection */}
+          <div className="flex flex-col space-y-2 my-2">
+            {loading && (
+              <div className="animate-pulse text-center text-white">
+                <p>Loading Chats...</p>
+              </div>
+            )}
+            {chats?.docs.map(chat => (
+              <ChatRow key={chat.id} id={chat.id} />
+            ))}
           </div>
-          {chats?.docs.map(chat => (
-            <ChatRow key={chat.id} id={chat.id} />
-          ))}
         </div>
       </div>
       {session && (
-        <img 
-          onClick={() => signOut()}
-          src={session.user?.image!} 
-          alt="profile pic" 
-          className="h-12 w-12 rounded-full mx-auto mb-2 hover:opacity-50 cursor-pointer" 
-        />
+        <div className="text-white font-bold flex justify-center mb-6">
+           <button onClick={() => signOut()}>
+            Sign Out
+           </button>
+        </div>
       )}
     </div>
   )
