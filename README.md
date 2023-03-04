@@ -4,9 +4,9 @@
 
 In this project, I am working with Next.js 13 to build a mini version of ChatGPT Messenger, so I am learning how to use the new Next.js folder structure, which gives us server rendered components by default in the new app folder.
 
-So far, I have created the homepage layout and the social login using Google.
+So far, I have created the homepage layout, social media authentication, firebase database, firebase admin, and fetch requests to OpenAI Api.
 
-Next up, I will be working on the Sidebar functionality, including realtime chat.
+Next up, I will be working on adding SWR, React Select Library and building on the Chat component.
 
 ## **Tech Stack** 🚀
 
