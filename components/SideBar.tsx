@@ -35,7 +35,7 @@ function SideBar() {
         </div>
       </div>
       {session && (
-        <div className="text-white font-bold flex justify-center mb-6">
+        <div className="text-white font-bold flex justify-center mb-24 md:mb-6">
            <button onClick={() => signOut()}>
             Sign Out
            </button>

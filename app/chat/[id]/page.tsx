@@ -12,7 +12,7 @@ function ChatPage({ params: { id } }: Props) {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      <div className="text-white mt-2 m-2 md:hidden">
+      <div className="text-white mt-2 md:hidden">
         <MobileMenu />
       </div>
       <Chat chatId={id} />
