@@ -7,7 +7,7 @@ export default function Head() {
   return (
     <>
       <title>ChatGPT Clone</title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" name="viewport" />
       <link rel="icon" href="/openai.svg" />
     </>
   )
