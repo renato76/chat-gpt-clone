@@ -40,3 +40,9 @@ Next up, I will be working on adding SWR, React Select Library and building on t
 **ChatGPT:**
 
 <img src="./styles/images/chatgpt.png" width="1200">
+
+</br>
+
+**Mobile:**
+
+<img src="./styles/images/mobile.png" width="380">
