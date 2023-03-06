@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import SideBar from './SideBar'
 import { useRouter, usePathname } from 'next/navigation'
+import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 function MobileView() {
   const router = useRouter()
@@ -19,21 +20,18 @@ function MobileView() {
   return (
     <div onClick={handleClick}>
       <div className="w-screen">
-      {showMenu && (
-          <div className="cursor-pointer">
-            <div onClick={handleHome} className="m-4">
-            Home
-           </div>
-           <div><SideBar /></div>
+      {showMenu ? (
+        <div>
+          <SideBar />
+        </div>
+      ): (
+        <div onClick={handleClick} className="m-4 cursor-pointer">
+          <div className="flex items-center">
+            <div className="mr-1"><AiOutlineArrowLeft /></div>
+            <div>Chats</div>
           </div>
-        )}
-        {!showMenu && (
-          <div  className="cursor-pointer">
-             <div onClick={handleClick} className="m-4">
-              Chats
-            </div>
-          </div>
-        )}
+        </div>
+      )}
       </div>
     </div>
   )

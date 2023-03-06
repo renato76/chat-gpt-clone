@@ -14,7 +14,7 @@ function Message({ message }: Props) {
         <p className="pt-1 text-sm">{message.text}</p>
       </div>
     </div>
-  );
+  )
 }
 
 export default Message

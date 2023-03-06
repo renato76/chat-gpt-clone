@@ -9,7 +9,7 @@ import Message from './Message'
 
 type Props = {
   chatId: string
-};
+}
 
 function Chat({ chatId }: Props) {
   const { data: session } = useSession()
