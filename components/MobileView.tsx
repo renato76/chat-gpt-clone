@@ -12,24 +12,18 @@ function MobileView() {
   const [showMenu, setShowMenu] = useState(isOnHomePage ? true : false)
 
   const handleClick = () => setShowMenu(!showMenu)
-  const handleHome = () => {
-    setShowMenu(!showMenu)
-    router.push('/')
-  }
 
   return (
     <div onClick={handleClick}>
       <div className="w-screen">
       {showMenu ? (
-        <div>
-          <SideBar />
-        </div>
+        <SideBar />
       ): (
-        <div onClick={handleClick} className="m-4 cursor-pointer">
-          <div className="flex items-center">
-            <div className="mr-1"><AiOutlineArrowLeft /></div>
+        <div onClick={handleClick} className="m-4 cursor-pointer flex items-center">
+            <div className="mr-1">
+              <AiOutlineArrowLeft />
+              </div>
             <div>Chats</div>
-          </div>
         </div>
       )}
       </div>
