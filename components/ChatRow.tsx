@@ -47,7 +47,7 @@ function ChatRow({ id }: Props) {
       <div className="flex items-center justify-center">
         <TrashIcon
           onClick={removeChat}
-          className="h-5 w-5 text-white absolute top-1/3 right-3 cursor-pointer hover:text-red-500 transition duration-500"
+          className="h-5 w-5 text-white absolute top-1/4 right-3 cursor-pointer hover:text-red-500 transition duration-500"
         />
       </div>
     </div>
