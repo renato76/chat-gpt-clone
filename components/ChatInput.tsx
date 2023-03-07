@@ -28,7 +28,6 @@ function ChatInput({ chatId }: Props) {
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!prompt) return
-    window.scrollTo(0,0)
     const input = prompt.trim()
     setPrompt('')
 
