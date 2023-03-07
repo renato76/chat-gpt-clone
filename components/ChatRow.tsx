@@ -34,20 +34,25 @@ function ChatRow({ id }: Props) {
   }
 
   return (
-    <Link
-      href={`/chat/${id}`}
-      className={`chatRow justify-center bg-[#3c4157] ${active && "bg-gray-700/50"}`}
-    >
-      <ChatBubbleLeftIcon className="h-5 w-5" />
-      <p className="md:inline-flex flex-1 truncate">
-        {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
-      </p>
-      <TrashIcon
-        onClick={removeChat}
-        className="h-5 w-5 text-white hover:text-red-500 transition duration-500"
-      />
-    </Link>
+    <div className="relative">
+      <Link
+        href={`/chat/${id}`}
+        className={`chatRow justify-center bg-[#3c4157] ${active && "bg-gray-700/50"}`}
+      >
+        <ChatBubbleLeftIcon className="h-5 w-5" />
+        <p className="md:inline-flex w-full pr-4 text-ellipsis overflow-hidden">
+          {messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}
+        </p>
+      </Link>
+      <div className="flex items-center justify-center">
+        <TrashIcon
+          onClick={removeChat}
+          className="h-5 w-5 text-white absolute top-1/3 right-3 cursor-pointer hover:text-red-500 transition duration-500"
+        />
+      </div>
+    </div>
   )
 }
 
 export default ChatRow
+

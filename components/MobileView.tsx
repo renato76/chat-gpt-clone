@@ -1,6 +1,5 @@
 'use client'
 
-import React, { useState } from 'react'
 import SideBar from './SideBar'
 import { useRouter, usePathname } from 'next/navigation'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
@@ -9,17 +8,18 @@ function MobileView() {
   const router = useRouter()
   const pathname = usePathname()
   const isOnHomePage = pathname === '/'
-  const [showMenu, setShowMenu] = useState(isOnHomePage ? true : false)
 
-  const handleClick = () => setShowMenu(!showMenu)
+  const handleChatsLink = () => {
+    router.replace('/')
+  }
 
   return (
-    <div onClick={handleClick}>
+    <div>
       <div className="w-screen">
-      {showMenu ? (
+      {isOnHomePage ? (
         <SideBar />
       ): (
-        <div onClick={handleClick} className="m-4 cursor-pointer flex items-center">
+        <div onClick={handleChatsLink} className="m-4 cursor-pointer flex items-center">
             <div className="mr-1">
               <AiOutlineArrowLeft />
               </div>
