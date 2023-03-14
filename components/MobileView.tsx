@@ -22,7 +22,7 @@ function MobileView() {
         <div onClick={handleChatsLink} className="m-4 cursor-pointer flex items-center">
             <div className="mr-1">
               <AiOutlineArrowLeft />
-              </div>
+            </div>
             <div>Chats</div>
         </div>
       )}
